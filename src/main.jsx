@@ -5,10 +5,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import CRUD from './components/CRUD/CRUD';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <CRUD></CRUD>
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
