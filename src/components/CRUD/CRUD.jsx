@@ -18,6 +18,9 @@ const CRUD = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.insertedId)
+            alert("User's has been successfully added to database");
+            form.reset();
         })
     }
     return (
