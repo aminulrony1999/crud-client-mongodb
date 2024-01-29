@@ -6,7 +6,7 @@ const Users = () => {
     return (
         <div>
             {
-                console.log(users)
+                users.map(user => <p key = {user._id}>Name : {user.name} <br /> Email : {user.email}</p>)
             }
         </div>
     );
