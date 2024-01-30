@@ -7,6 +7,19 @@ const Update = () => {
         const form = event.target;
         const name = form.name.value;
         const email = form.email.value;
+        const updatedUser = {name,email};
+        fetch(`http://localhost:5000/users/${loadedUser._id}`,{
+            method : 'PUT',
+            headers : {
+                'content-type' : 'application/json'
+            },
+            body : JSON.stringify(updatedUser)
+        })
+        .then(res => res.json())
+        .then(data =>{
+            if(data.modifiedCount)
+            alert("User details updated successfully");
+        })
     }
     return (
         <div>
