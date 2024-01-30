@@ -5,9 +5,12 @@ const Update = () => {
     console.log(loadedUser);
     return (
         <div>
-            <h3>Name : {loadedUser.name}</h3>
-            <p>Email : {loadedUser.email}</p>
-            <h4>Id : {loadedUser._id}</h4>
+            <h3>Update information of {loadedUser.name}</h3>
+            <form>
+                <input type="text" name="name" id="" defaultValue={loadedUser?.name} /> <br />
+                <input type="email" name="name" id="" defaultValue={loadedUser?.email} /> <br />
+                <input type="submit" value="Update" />
+            </form>
         </div>
     );
 };
